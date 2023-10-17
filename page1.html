@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <script src="./page1.js"></script>
+  </head>
+  <body>
+    <div>
+      <h1>Posts</h1>
+      <button
+        onclick="fetchAndRenderPosts('https://jsonplaceholder.typicode.com/posts')"
+      >
+        1. Fetch posts
+      </button>
+      <button onclick="sortAndRenderPosts()">2. Sort by title (A-Z)</button>
+      <button onclick="groupAndRenderPosts()">2. Group by user ID</button>
+      <div id="posts-group"><ul id="posts"></ul></div>
+    </div>
+  </body>
+</html>
