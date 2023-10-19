@@ -32,3 +32,26 @@ Accessed by [./page2.html](./page2.html) in browser
 - Notes:
   - Multiple audio files can be played at the same time. Depending on requirements, may or may not be a functionality that is needed. In this case, will have to stop playing of one source node before starting another.
   - Have to create a new AudioBufferSourceNode for each play action, otherwise expect `DOMException: Failed to execute 'start' on 'AudioBufferSourceNode': cannot call start more than once.`
+
+---
+
+Comments: 
+
+- `sort()` returns a reference to the original array, so `const sorted
+= array.sort(...)` is redundant.
+- You can use https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare
+for sorting alphabetically, it more "correct" as it handles edge cases
+and, more importantly, should be simpler to use.
+- It seems like the CSS was a bit neglected, just by looking at the formatting.
+- Using "float" with "clear" for alignment works, but it's a "dated" technique.
+- The width values are not working as expected, the "columns" are
+uneven on a wide viewport.
+- I feel like the CORS could be addressed quickly by having some
+hosting solution ready to use (like GitHub Pages), but no big deal.
+- The audio page works fine.
+- Writing JSDoc is definitely a nice touch.
+
+In general, functionalities are working as expected, but it is falling
+short on the CSS. I believe you could have avoided the layout problem
+entirely if you opted for flexbox or CSS grid, or maybe just used more
+"defensive" CSS.
